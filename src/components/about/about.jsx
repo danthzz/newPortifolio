@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './about.css';
+import about from '../../assets/about.png'
+import cvEn from '../../assets/Daniel Gomes - cv En.pdf'
+import cvBr from '../../assets/Daniel Gomes - cv.pdf'
 import { useLanguageContext } from '../language';
 
 const About = () => {
     const { selectedLanguage } = useLanguageContext();
 
-    useEffect(() =>{
+    useEffect(() => {
         console.log(selectedLanguage)
-    },[selectedLanguage]) 
+    }, [selectedLanguage])
 
-    const [translations, setTranslations] = useState ({
+    const [translations, setTranslations] = useState({
         en: {
             title: 'About me',
             subtitle: 'Personal summary',
@@ -33,7 +36,7 @@ const About = () => {
             <h2 className="section__title">{translations[selectedLanguage].title}</h2>
             <div className="section__subtitle">{translations[selectedLanguage].subtitle}</div>
             <div className="about__container container1 grid">
-                <img src="assets/img/about.png" alt="" className="about__img" />
+                <img src={about} alt="" className="about__img" />
                 <div className="about__data">
                     <p className="about__description">{translations[selectedLanguage].description}</p>
                     <div className="about__info">
@@ -51,10 +54,16 @@ const About = () => {
                         </div>
                     </div>
                     <div className="about__buttons">
-                        <a download="" href="assets/pdf/Daniel.pdf" className="button button--flex">
-                            {translations[selectedLanguage].downloadCV}
-                            <i className="uil uil-import button__icon"></i>
-                        </a>
+                        {selectedLanguage === 'br' ?
+                            <a download="" href={cvBr} className="button button--flex">
+                                {translations[selectedLanguage].downloadCV}
+                                <i className="uil uil-import button__icon"></i>
+                            </a> :
+                            <a download="" href={cvEn} className="button button--flex">
+                                {translations[selectedLanguage].downloadCV}
+                                <i className="uil uil-import button__icon"></i>
+                            </a>
+                        }
                     </div>
                 </div>
             </div>

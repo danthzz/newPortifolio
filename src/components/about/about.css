@@ -1,8 +1,9 @@
 .about__img{
-    width: 200px;
+    width: 20em;
     border-radius: .5rem;
     justify-self: center;
     align-self: center;
+    margin-bottom: 2em;
 }
 
 .about__description{

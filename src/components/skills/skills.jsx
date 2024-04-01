@@ -67,7 +67,7 @@ const Skills = () => {
                             <i className="uil uil-brackets-curly skills__icon"></i>
                             <div>
                                 <h3 className="skills__titles">{translations[selectedLanguage].frontendTitle}</h3>
-                                <div className="skills__subtitle">{translations[selectedLanguage].intermediate}</div>
+                                <div className="skills__subtitle">{translations[selectedLanguage].advanced}</div>
                             </div>
                             <i className="uil uil-angle-down skills__arrow"></i>
                         </div>
@@ -114,12 +114,12 @@ const Skills = () => {
                             </div>
                             <div className="skills__data">
                                 <div className="skills__titles">
-                                    <h3 className="skills__name">Angular</h3>
-                                    <span className="skills__subtitle">{translations[selectedLanguage].intermediate}</span>
-                                    <div className="skills__number">40%</div>
+                                    <h3 className="skills__name">Bootstrap</h3>
+                                    <span className="skills__subtitle">{translations[selectedLanguage].advanced}</span>
+                                    <div className="skills__number">70%</div>
                                 </div>
                                 <div className="skills__bar">
-                                    <div className="skills__percentage skills__angular"></div>
+                                    <div className="skills__percentage skills__boot"></div>
                                 </div>
                             </div>
                             <div className="skills__data">
@@ -142,7 +142,7 @@ const Skills = () => {
                             <i className="uil uil-server-network skills__icon"></i>
                             <div>
                                 <h3 className="skills__titles">{translations[selectedLanguage].backendTitle}</h3>
-                                <div className="skills__subtitle">{translations[selectedLanguage].basic}</div>
+                                <div className="skills__subtitle">{translations[selectedLanguage].intermediate}</div>
                             </div>
                             <i className="uil uil-angle-down skills__arrow"></i>
                         </div>

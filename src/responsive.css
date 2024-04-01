@@ -18,8 +18,7 @@
         grid-template-columns: .25fr 3fr;
         display: grid;
     }
-    
- 
+
     .home__blob{
         width: 180px;
     }
@@ -178,10 +177,6 @@
         width: 450px;
     }
  
-    .footer__container{
-        grid-template-columns: repeat(3, 1fr);
-    }
- 
     .footer__bg{
         padding: 3rem 0 3.5rem;
     }
@@ -211,6 +206,7 @@
     .home__blob{
         width: 320px;
     }
+    
     .home__social{
         transform: translateX(-6rem);
     }

@@ -1,5 +1,6 @@
 .footer{
     padding-top: 5rem;
+    text-align: center;
 }
 
 .footer__container{
@@ -8,7 +9,7 @@
 
 .footer__bg{
     background-color: var(--first-color);
-    padding: 2rem 0 3rem;
+    padding: 2rem 0 2rem;
 }
 
 .footer__tittle{
@@ -20,9 +21,9 @@
     font-size: var(--small-font-size);
 }
 
+
 .footer__social{
     font-size: 1.25rem;
-    margin-right: var(--mb-1-5);
 }
 
 .footer__social:hover{
@@ -32,8 +33,7 @@
 .footer__copy{
     font-size: var(--smaller-font-size);
     text-align: center;
-    color: var(--text-color);
-    margin-top: var(--mb-3);
+    color: #fff;
 }
 
 .footer__title,
