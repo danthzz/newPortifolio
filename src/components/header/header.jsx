@@ -22,7 +22,7 @@ const Header = () => {
             about: 'Sobre',
             skills: 'Habilidades',
             qualifications: 'Qualificações',
-            services: 'Serviços',
+            services: 'Aptidões',
         },
     });
 
