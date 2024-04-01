@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './header.css';
 import brFlag from '../../assets/br.svg';
 import enFlag from '../../assets/en.svg';
+import { useLanguageContext } from '../language';
+
 
 const Header = () => {
     const [isDarkTheme, setIsDarkTheme] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('br');
+    const { selectedLanguage, setSelectedLanguage } = useLanguageContext();
     console.log(selectedLanguage)
     const [translations, setTranslations] = useState({
         en: {
@@ -23,6 +25,10 @@ const Header = () => {
             services: 'Serviços',
         },
     });
+
+    useEffect(() => {
+        
+    })
 
     useEffect(() => {
         const themeToggle = () => {
@@ -183,14 +189,14 @@ const Header = () => {
                 <div className="nav__btns">
                     {/* LANGUAGE SELECT */}
                     <div className="dropdown">
-                        <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button className="btn dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img className='flag' src={selectedLanguage === 'br' ? brFlag : enFlag} alt="Language" />
                         </button>
-                        <ul className="dropdown-menu">
+                        <ul className="dropdown-menu ">
                             {selectedLanguage === 'br' ?
-                                <li><button onClick={() => handleLanguageChange('en')}><img className='flag' src={enFlag} alt="English" /> Inglês</button></li>
+                                <li><p className='drop-btn' onClick={() => handleLanguageChange('en')}><img className='flag' src={enFlag} alt="English" /> Inglês</p></li>
                                 :
-                                <li><button onClick={() => handleLanguageChange('br')}><img className='flag' src={brFlag} alt="Português" /> Portuguese</button></li>
+                                <li><p onClick={() => handleLanguageChange('br')}><img className='flag' src={brFlag} alt="Português" /> Portuguese</p></li>
                             }
 
                         </ul>

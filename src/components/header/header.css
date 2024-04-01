@@ -42,8 +42,24 @@
 .nav__list{
     grid-template-columns: repeat(3, .5fr);
     gap: 2rem;
+    margin-bottom: 0;
 }
 
+.dropdown-menu{
+    background-color: var(--body-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.drop-btn{
+    background-color: var(--body-color);
+    border: none;
+}
+
+.dropdown{
+    margin-right: .5em;
+}
 .nav__link{
     display: flex;
     flex-direction: column;
@@ -74,7 +90,7 @@
 }
 
 .flag{
-    width: 2em;
+    width: 1.7em;
 }
 /* show menu */
 .show-menu{

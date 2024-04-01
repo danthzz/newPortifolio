@@ -138,9 +138,12 @@ img{
     height: auto;
 }
 
+p{
+    margin-bottom: 0;
+}
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section{
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 4rem ;
 }
 
 .section__title{

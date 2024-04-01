@@ -14,13 +14,13 @@ function App() {
 
   return (
     <LanguageProvider>
-     <Header />
-     <Home /> 
-     <About />
-     <Skills />
-     <Qualification />
-     <Services />
-     <Footer />
+      <Header />
+      <Home />
+      <About />
+      <Skills />
+      <Qualification />
+      <Services />
+      <Footer />
     </LanguageProvider>
   )
 }

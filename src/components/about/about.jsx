@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './about.css';
-import { useLanguage } from '../language';
+import { useLanguageContext } from '../language';
 
 const About = () => {
-    const { selectedLanguage } = useLanguage();
+    const { selectedLanguage } = useLanguageContext();
 
     useEffect(() =>{
         console.log(selectedLanguage)
@@ -13,7 +13,7 @@ const About = () => {
         en: {
             title: 'About me',
             subtitle: 'Personal summary',
-            description: 'I am always seeking knowledge and new challenges. Currently, I have intermediate knowledge in HTML, CSS, JavaScript, React, Angular, and I am learning Python, TypeScript, .NET, C#, and MongoDB. I am quick to learn, proactive, and determined.',
+            description: 'I am currently part of a team responsible for developing a software for analyzing vibrations of large machines using technologies such as: React.js, React Query, Axios, Bootstrap, Material UI, Node.js, Knex.js, PM2, Express , TypeScript , Docker, .NET and AWS (Amazon Web Services).',
             yearExperience: 'Year of experience',
             projectsCompleted: 'Projects completed',
             downloadCV: 'Download my CV',
@@ -21,7 +21,7 @@ const About = () => {
         br: {
             title: 'Sobre mim',
             subtitle: 'Resumo pessoal',
-            description: 'Estou sempre em busca de conhecimento e novos desafios. Atualmente, tenho conhecimento intermediário em HTML, CSS, JavaScript, React, Angular e estou aprendendo Python, TypeScript, .NET, C# e MongoDB. Tenho facilidade no aprendizado, sou proativo e determinado.',
+            description: 'Atualmente faço parte de uma equipe responsavel por desenvolver um software para analise de vibração de maquinas de grande porte usando tecnologias como: React.js, React Query, Axios, Bootstrap, Material UI, Node.js, Knex.js, PM2, Express, TypeScript, Docker, .NET e AWS (Amazon Web Services) .',
             yearExperience: 'Ano de experiência',
             projectsCompleted: 'Projetos concluídos',
             downloadCV: 'Baixe meu CV',
@@ -41,16 +41,12 @@ const About = () => {
                             <span className="about__info-title">01</span>
                             <span className="about__info-name">
                                 {translations[selectedLanguage].yearExperience}
-                                <br />
-                                de experiência
                             </span>
                         </div>
                         <div>
                             <a href="https://github.com/danthzz" className="about__info-title1" target="_blank" rel="noopener noreferrer">13</a>
                             <span className="about__info-name">
                                 {translations[selectedLanguage].projectsCompleted}
-                                <br />
-                                concluídos
                             </span>
                         </div>
                     </div>
