@@ -15,6 +15,10 @@
     color: var(--first-color);
 }
 
+.skills__arrow:hover{
+    transform: translateY(.25rem);
+}
+
 .skills__icon{
     margin-right: var(--mb-0-75);
 }

@@ -55,7 +55,7 @@
 }
 
 .loading-circle::after {
-    border-top-color: #36abf9; 
+    border-top-color: var(--first-color-alt); 
     animation: spin-reverse 3s linear infinite; 
 }
 
@@ -115,4 +115,8 @@
 
 .home__scroll-arrow{
     font-size: 1.25rem;   
+}
+
+.home__scroll-button:hover{
+    color: var(--first-color-alt);
 }

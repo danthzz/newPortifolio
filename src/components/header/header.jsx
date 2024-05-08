@@ -6,9 +6,8 @@ import { useLanguageContext } from '../language';
 
 
 const Header = () => {
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [isDarkTheme, setIsDarkTheme] = useState();
     const { selectedLanguage, setSelectedLanguage } = useLanguageContext();
-    console.log(selectedLanguage)
     const [translations, setTranslations] = useState({
         en: {
             home: 'Home',
@@ -27,31 +26,25 @@ const Header = () => {
     });
 
     useEffect(() => {
-        
-    })
+        const selectedTheme = localStorage.getItem('selected-theme');
+        if (selectedTheme === 'dark') {
+            toggleDarkTheme();
+        } else {
+            toggleLightTheme();
+        }
+    }, []);
 
-    useEffect(() => {
-        const themeToggle = () => {
-            const selectedTheme = localStorage.getItem('selected-theme');
-            setIsDarkTheme(selectedTheme === 'dark');
-        };
+    const toggleDarkTheme = () => {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('selected-theme', 'dark');
+        setIsDarkTheme(true)
+    };
 
-        const toggleTheme = () => {
-            const newTheme = isDarkTheme ? 'light' : 'dark';
-            setIsDarkTheme(!isDarkTheme);
-            localStorage.setItem('selected-theme', newTheme);
-            document.body.classList.toggle('dark-theme', isDarkTheme);
-        };
-
-        themeToggle();
-
-        const themeButton = document.getElementById('theme-button');
-        themeButton.addEventListener('click', toggleTheme);
-
-        return () => {
-            themeButton.removeEventListener('click', toggleTheme);
-        };
-    }, [isDarkTheme]);
+    const toggleLightTheme = () => {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('selected-theme', 'light');
+        setIsDarkTheme(false)
+    };
 
     useEffect(() => {
         const scrollHeader = () => {
@@ -143,10 +136,13 @@ const Header = () => {
 
     const handleLanguageChange = (lang) => {
         setSelectedLanguage(lang);
+        console.log(lang)
     };
 
+    console.log(isDarkTheme)
+
     return (
-        <header className={`header ${isDarkTheme ? 'dark-theme' : ''}`} id="header">
+        <header className='header' id="header">
             <nav className="nav container1">
                 <a href="#" className="nav__logo">
                     Daniel Gomes
@@ -194,18 +190,18 @@ const Header = () => {
                         </button>
                         <ul className="dropdown-menu ">
                             {selectedLanguage === 'br' ?
-                                <li><p className='drop-btn' onClick={() => handleLanguageChange('en')}><img className='flag' src={enFlag} alt="English" /> Inglês</p></li>
+                                <li><p className='drop-btn lang-btn' onClick={() => handleLanguageChange('en')}><img className='flag' src={enFlag} alt="English" /> Inglês</p></li>
                                 :
-                                <li><p onClick={() => handleLanguageChange('br')}><img className='flag' src={brFlag} alt="Português" /> Portuguese</p></li>
+                                <li><p className='drop-btn lang-btn' onClick={() => handleLanguageChange('br')}><img className='flag' src={brFlag} alt="Português" /> Portuguese</p></li>
                             }
 
                         </ul>
                     </div>
                     {/* Dark mode */}
-                    {isDarkTheme === true ?
-                        <i className="uil uil-moon change-theme" id="theme-button"></i>
+                    {isDarkTheme  ?
+                        <i onClick={toggleLightTheme} className="uil uil-sun change-theme" id="theme-button"></i>
                         :
-                        <i className='uil uil-sun change-theme' id='theme-button'></i>
+                        <i onClick={toggleDarkTheme} className='uil uil-moon change-theme' id='theme-button'></i>
                     }
                     <div className="nav__toggle" id="nav-toggle">
                         <i className="uil uil-ellipsis-v"></i>

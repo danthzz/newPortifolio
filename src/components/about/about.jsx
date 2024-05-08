@@ -16,7 +16,7 @@ const About = () => {
         en: {
             title: 'About me',
             subtitle: 'Personal summary',
-            description: 'I am currently part of a team responsible for developing a software for analyzing vibrations of large machines using technologies such as: React.js, React Query, Axios, Bootstrap, Material UI, Node.js, Knex.js, PM2, Express , TypeScript , Docker, .NET and AWS (Amazon Web Services).',
+            description: 'Full Stack Developer, specialized in React.Js. Working professionally with React since 2022, improving application performance and integrations and I have experience in developing applications with Node.js, automations and data analysis using Python.',
             yearExperience: 'Year of experience',
             projectsCompleted: 'Projects completed',
             downloadCV: 'Download my CV',
@@ -24,7 +24,7 @@ const About = () => {
         br: {
             title: 'Sobre mim',
             subtitle: 'Resumo pessoal',
-            description: 'Atualmente faço parte de uma equipe responsavel por desenvolver um software para analise de vibração de maquinas de grande porte usando tecnologias como: React.js, React Query, Axios, Bootstrap, Material UI, Node.js, Knex.js, PM2, Express, TypeScript, Docker, .NET e AWS (Amazon Web Services) .',
+            description: 'Desenvolvedor Full Stack, especializado em React.Js. Trabalhando profissionalmente com React desde 2022, melhorando o desempenho e integrações de aplicações, tenho experiência no desenvolvimento de aplicações com Node.js, automações e análise de dados usando Python.',
             yearExperience: 'Ano de experiência',
             projectsCompleted: 'Projetos concluídos',
             downloadCV: 'Baixe meu CV',
@@ -47,7 +47,7 @@ const About = () => {
                             </span>
                         </div>
                         <div>
-                            <a href="https://github.com/danthzz" className="about__info-title1" target="_blank" rel="noopener noreferrer">13</a>
+                            <a href="https://github.com/danthzz" className="about__info-title1" target="_blank" rel="noopener noreferrer">17</a>
                             <span className="about__info-name">
                                 {translations[selectedLanguage].projectsCompleted}
                             </span>

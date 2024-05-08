@@ -57,9 +57,18 @@
     border: none;
 }
 
+.lang-btn{
+    cursor: pointer;
+}
+
+.lang-btn:hover{
+    color: var(--text-color-light);
+}
+
 .dropdown{
     margin-right: .5em;
 }
+
 .nav__link{
     display: flex;
     flex-direction: column;

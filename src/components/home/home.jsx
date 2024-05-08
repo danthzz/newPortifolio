@@ -10,13 +10,13 @@ const Home = () => {
         en: {
             title: 'Daniel Gomes',
             subtitle: 'Fullstack Developer',
-            description: 'Systems Analysis and Development student, technology enthusiast, always looking for new challenges.',
+            description: 'Systems Analysis and Development student, technology enthusiast, always seeking new knowledge and skills.',
             scrollName: 'Scroll down',
         },
         br: {
             title: 'Daniel Gomes',
             subtitle: 'Desenvolvedor Fullstack',
-            description: 'Estudante de Análise e Desenvolvimento de Sistemas, entusiasta de tecnologia, sempre em busca de novos desafios.',
+            description: 'Estudante de Análise e Desenvolvimento de Sistemas, entusiasta de tecnologia, buscando sempre novos conhecimentos e habilidades.',
             scrollName: 'Role para baixo',
         },
     };

@@ -36,6 +36,10 @@
     border: none;
 }
 
+.services__button:hover{
+    color: var(--first-color-alt);
+}
+
 .services__button:hover .button__icon{
     transform: translateX(.25rem);
 }
@@ -87,6 +91,10 @@
     cursor: pointer;
     background-color: var(--container-color);
     border: none;
+}
+
+.services__modal-close:hover{
+    color: var(--first-color-alt);
 }
 
 .services__modal-icon{
